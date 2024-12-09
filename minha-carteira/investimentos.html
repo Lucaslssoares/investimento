@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investimentos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Barra de navegação com offcanvas -->
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="home.html">Carteira de Investimentos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+  
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="deposito.html">Depósito</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="historico.html">Histórico</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="saque_bonus.html">Saque de Bônus</a>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-danger w-100" id="logoutBtn">Sair</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Conteúdo da página -->
+  <div class="container mt-5 pt-5">
+    <h2 class="text-center">Realizar Investimento</h2>
+    <div id="saldoContainer" class="text-center my-4">
+      <p>Carregando saldo...</p>
+    </div>
+    <div class="mb-3">
+      <label for="valorInvestimento" class="form-label">Valor do Investimento</label>
+      <input type="number" class="form-control" id="valorInvestimento" placeholder="Digite o valor">
+    </div>
+    <div class="row mt-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">CDB</h5>
+            <p class="card-text">Rendimento 10% ao ano.</p>
+            <button class="btn btn-primary w-100" onclick="investir('CDB')">Investir</button>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Tesouro Direto</h5>
+            <p class="card-text">Rendimento 8% ao ano.</p>
+            <button class="btn btn-primary w-100" onclick="investir('Tesouro Direto')">Investir</button>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Fundos Imobiliários</h5>
+            <p class="card-text">Rendimento 12% ao ano.</p>
+            <button class="btn btn-primary w-100" onclick="investir('Fundos Imobiliários')">Investir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="investimentoFeedback" class="mt-4 text-center"></div>
+  </div>
+
+  <script src="js/investimentos.js"></script>
+
+  <!-- Bootstrap JS (necessário para o funcionamento da navbar com botão toggle) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

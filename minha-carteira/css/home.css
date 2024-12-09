@@ -1,0 +1,72 @@
+body {
+    background-color: #f4f7fa;
+  }
+
+  .navbar {
+    background-color: #007bff;
+  }
+
+  .navbar-brand {
+    font-size: 1.8rem;
+    color: #fff !important;
+  }
+
+  .offcanvas-header {
+    background-color: #007bff;
+    color: white;
+  }
+
+  .card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    color: #007bff;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+
+  .btn-success:hover {
+    background-color: #218838;
+  }
+
+  .alert {
+    text-align: center;
+  }
+
+  .accordion-button {
+    font-weight: 500;
+  }
+
+  .container h1 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .card-body {
+      text-align: center;
+    }
+
+    .alert h4 {
+      font-size: 1.5rem;
+    }
+  }

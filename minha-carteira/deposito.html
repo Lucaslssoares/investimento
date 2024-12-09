@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Depósito</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="home.html">Carteira de Investimentos</a>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <h2 class="text-center">Realizar Depósito</h2>
+    <div class="card mt-4">
+      <div class="card-body">
+        <form id="depositForm">
+          <div class="mb-3">
+            <label for="valor" class="form-label">Valor do Depósito (R$)</label>
+            <input type="number" class="form-control" id="valor" placeholder="Digite o valor" required min="1" step="0.01">
+          </div>
+          <button type="submit" class="btn btn-primary w-100" id="depositButton">Gerar QR Code</button>
+        </form>
+        <div id="loading" class="mt-3 text-center" style="display: none;">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Carregando...</span>
+          </div>
+          <p>Gerando QR Code...</p>
+        </div>
+        <div id="qrcodeContainer" class="mt-4 text-center"></div>
+        <div id="emailStatus" class="mt-3 text-center text-success" style="display: none;">
+          E-mail de confirmação enviado com sucesso!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/deposito.js"></script>
+</body>
+</html>
